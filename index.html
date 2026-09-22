@@ -1,221 +1,305 @@
-﻿<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}}
-html,body{height:100%;}
-body{overflow:hidden;}
-main{height:100vh;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;}
-main>div.flex.flex-col.w-full.relative.overflow-hidden{display:flex;flex-direction:row;align-items:stretch;width:max-content;min-width:100%;height:100%;overflow:visible!important;}
-main>div.flex.flex-col.w-full.relative.overflow-hidden>section,main>div.flex.flex-col.w-full.relative.overflow-hidden>div.flex{width:100vw;min-width:100vw;height:100%;overflow-y:auto;overflow-x:hidden;flex-shrink:0;scroll-snap-align:start;}
-@keyframes fotoIrenEntrance{from{opacity:0;transform:scale(0.85) translateY(24px);}to{opacity:1;transform:scale(1) translateY(0);}}
-#foto-iren-wrap{opacity:0;animation:fotoIrenEntrance 900ms ease-out 200ms forwards;}
-@media (prefers-reduced-motion:reduce){#foto-iren-wrap{opacity:1;animation:none;}}
-</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"on-tertiary-fixed-variant":"#504441","surface-tint":"#ac2471","surface-bright":"#fff8f6","surface":"#fff8f6","error-container":"#ffdad6","ink":"#0a0a0a","primary-fixed-dim":"#ffb0d0","on-secondary-fixed-variant":"#274f2c","on-background":"#201a19","sage-muted":"#adcbad","primary-hover":"#e0559d","outline-variant":"#dcbfc9","surface-container-highest":"#ece0dd","tertiary":"#695b58","tertiary-container":"#ac9c98","tertiary-fixed":"#f1deda","on-surface":"#201a19","background":"#fff8f6","surface-container-high":"#f1e6e3","surface-container":"#f7ebe8","primary-container":"#ff69b4","surface-variant":"#ece0dd","on-secondary-container":"#446e47","primary":"#ac2471","on-primary":"#ffffff","paper":"#ffffff","on-secondary-fixed":"#002107","secondary":"#3e6842","on-primary-fixed":"#3d0024","error":"#ba1a1a","on-surface-variant":"#564149","secondary-container":"#bfefbe","secondary-fixed-dim":"#a4d2a4","on-primary-container":"#6e0044","on-tertiary":"#ffffff","outline":"#897179","on-error":"#ffffff","tertiary-fixed-dim":"#d5c3bf","on-tertiary-fixed":"#231917","on-tertiary-container":"#3f3431","surface-container-lowest":"#ffffff","inverse-surface":"#352f2d","on-secondary":"#ffffff","surface-container-low":"#fdf1ee","inverse-primary":"#ffb0d0","primary-fixed":"#ffd8e6","secondary-fixed":"#bfefbe","inverse-on-surface":"#faeeeb","surface-dim":"#e3d8d5","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"base":"8px","stack-md":"16px","margin-page":"32px","gutter":"24px","section-gap":"64px","stack-lg":"32px","stack-sm":"8px"},"fontFamily":{"headline-lg-mobile":["Syne"],"body-md":["Inter"],"body-lg":["Inter"],"caption":["Inter"],"display":["Syne"],"headline-lg":["Syne"],"label-bold":["Inter"],"headline-md":["Syne"]},"fontSize":{"headline-lg-mobile":["28px",{"lineHeight":"1.2","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"1.5","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"caption":["12px",{"lineHeight":"1.3","fontWeight":"500"}],"display":["44px",{"lineHeight":"1.05","letterSpacing":"0.05em","fontWeight":"800"}],"headline-lg":["36px",{"lineHeight":"1.15","letterSpacing":"0.02em","fontWeight":"700"}],"label-bold":["14px",{"lineHeight":"1.4","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"1.2","fontWeight":"700"}]}}}}</script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Syne:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-background border-b border-ink"><div class="h-16 max-w-[1200px] mx-auto px-margin-page flex items-center justify-center"><nav class="flex items-center gap-stack-lg" data-active-classes="text-primary underline decoration-2 underline-offset-4"><a aria-current="page" class="font-label-bold transition-colors text-primary underline decoration-2 underline-offset-4" data-path="home" href="#" onclick="deckGo('home');return false;">Home</a><a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" data-path="project" href="#" onclick="deckGo('my-design');return false;">Project</a></nav></div></header><main id="deck" class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full relative overflow-hidden">
-<div class="absolute top-20 -left-10 w-64 h-64 bg-primary-container rounded-full mix-blend-multiply opacity-50 blur-[100px] pointer-events-none"></div>
-<div class="absolute bottom-40 -right-20 w-96 h-96 bg-secondary-container rounded-full mix-blend-multiply opacity-50 blur-[120px] pointer-events-none"></div>
-<section id="home" class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center relative">
-<div class="absolute -top-10 -left-10 w-64 h-64 border border-ink bg-secondary-container rounded-full opacity-50 pointer-events-none transform -translate-x-1/2 -translate-y-1/2" style="box-shadow: 4px 4px 0px 0px #0a0a0a;"></div>
-<div id="foto-iren-wrap" class="lg:col-span-5 relative z-10 group w-full max-w-[420px] mx-auto">
-<div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div>
-<img alt="Mauren Try Nesa Lestari" class="relative z-20 w-full h-auto aspect-square object-cover rounded-2xl border border-ink" src="image/foto iren.jpeg" style="box-shadow: 6px 6px 0px 0px #0a0a0a;"/>
-<div class="absolute -bottom-6 -right-6 bg-tertiary-fixed border border-ink px-stack-md py-stack-sm rounded-full z-30 transform rotate-3" style="box-shadow: 2px 2px 0px 0px #0a0a0a;">
-<span class="font-label-bold text-ink uppercase tracking-widest text-caption">Available for Mentorship</span>
-</div>
-</div>
-<div class="lg:col-span-7 flex flex-col gap-stack-lg z-10">
-<div class="relative w-fit">
-<div class="absolute -top-6 -left-6 z-0 transform -rotate-12">
-<svg class="text-primary animate-[spin_10s_linear_infinite]" fill="none" height="48" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="48">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-</svg>
-</div>
-<h1 class="font-display text-display text-ink uppercase relative z-10 break-words drop-shadow-[4px_4px_0_var(--tw-shadow-color)] shadow-primary-container">
-            Portofolio
-          </h1>
-</div>
-<div class="mt-stack-lg flex flex-wrap items-center gap-3">
-<div class="px-5 py-3 bg-paper border border-ink rounded-lg shadow-[4px_4px_0px_0px_#0a0a0a] flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-secondary-fixed border border-ink flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-ink text-[22px]">badge</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-bold text-label-bold text-ink uppercase tracking-wide">Mauren Try Nesa Lestari</span>
-<span class="font-caption text-caption text-on-surface-variant">Kelas: XII DKV 3 &middot; No. Absen: 19</span>
-</div>
-</div>
-<div class="flex gap-2">
-<span class="bg-secondary text-ink border border-ink rounded-full px-3 py-1 font-caption text-caption font-bold shadow-[2px_2px_0_#0a0a0a]">XII DKV 3</span>
-<span class="bg-primary-container text-on-primary-container border border-ink rounded-full px-3 py-1 font-caption text-caption font-bold shadow-[2px_2px_0_#0a0a0a]">Absen 19</span>
-</div>
-</div>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-          Halo! Saya Mauren Try Nesa Lestari, siswi jurusan Desain Komunikasi Visual SMKN 10 Surabaya yang memiliki minat besar dalam bidang kreatif dan visual. Saya senang mengeksplorasi warna, konsep, dan ide untuk menciptakan desain yang menarik serta komunikatif. Melalui portofolio ini, saya ingin memperlihatkan hasil karya dan proses perkembangan kemampuan saya dalam dunia desain.
-        </p>
-<div class="flex flex-wrap gap-stack-md items-center">
-<a href="https://instagram.com/i12en.n3" target="_blank" rel="noopener noreferrer" aria-label="Instagram i12en.n3" class="bg-primary text-on-primary border border-ink px-8 py-4 rounded-full font-label-bold text-label-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#0a0a0a] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#0a0a0a] transition-all group relative overflow-hidden">
-<span class="relative z-10 flex items-center gap-2"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> i12en.n3</span>
-<div class="absolute inset-0 bg-primary-hover transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
-</a>
-<a href="mailto:maurenlestari@gmail.com" aria-label="Email maurenlestari@gmail.com" class="bg-primary text-on-primary font-label-bold px-stack-lg py-stack-md rounded-full border border-ink flex items-center gap-base hover:-translate-y-1 hover:-translate-x-1 transition-transform" style="box-shadow: 4px 4px 0px 0px #0a0a0a;">
-<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg> maurenlestari@gmail.com
-</a>
-</div>
-<div class="flex flex-wrap items-center gap-2 mt-4">
-<span class="font-label-bold text-label-bold text-ink uppercase tracking-widest text-caption mr-1">Tools:</span>
-<span class="bg-surface-container-lowest text-ink border border-ink rounded-full px-3 py-1 font-caption text-caption font-bold shadow-[2px_2px_0_#0a0a0a] flex items-center gap-1"><span class="w-5 h-5 rounded-md border border-ink flex items-center justify-center text-[10px] font-black shrink-0" style="background:#EA7600;color:#fff;">Bl</span> Blender 3D</span>
-<span class="bg-surface-container-lowest text-ink border border-ink rounded-full px-3 py-1 font-caption text-caption font-bold shadow-[2px_2px_0_#0a0a0a] flex items-center gap-1"><span class="w-5 h-5 rounded-md border border-ink flex items-center justify-center text-[10px] font-black shrink-0" style="background:#330000;color:#FF9A00;">Ai</span> Adobe Illustrator</span>
-<span class="bg-surface-container-lowest text-ink border border-ink rounded-full px-3 py-1 font-caption text-caption font-bold shadow-[2px_2px_0_#0a0a0a] flex items-center gap-1"><span class="w-5 h-5 rounded-md border border-ink flex items-center justify-center text-[10px] font-black shrink-0" style="background:#001E36;color:#31A8FF;">Ps</span> Adobe Photoshop</span>
-<span class="bg-surface-container-lowest text-ink border border-ink rounded-full px-3 py-1 font-caption text-caption font-bold shadow-[2px_2px_0_#0a0a0a] flex items-center gap-1"><span class="w-5 h-5 rounded-md border border-ink flex items-center justify-center text-[10px] font-black shrink-0" style="background:linear-gradient(135deg,#00C4CC,#7D2AE8);color:#fff;">Ca</span> Canva</span>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-View-Surge-2026 - Fast View Boosting Software for Windows</title>
+    <meta name="description" content="Download Instagram-View-Surge-2026, the powerful Windows software for boosting Instagram video views. Fast, stable, no login required. Regular updates for maximum effectiveness.">
+    <meta name="keywords" content="2026-tools,content-growth,content-visibility,creator-tools,instagram,instagram-growth-bot,instagram-growth-tool,instagram-views,video-promotion,view-boost,view-booster,windows-software-containment,windows-tool,windows-tools,windows-tools-2026">
+    <meta name="author" content="Instagram-View-Surge-2026 Team">
+    <meta property="og:title" content="Instagram-View-Surge-2026 - Fast View Boosting Software for Windows">
+    <meta property="og:description" content="Boost your Instagram video views fast in 2026. No login required, stable performance, and regular updates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Globalclimatechangemonitor5146/Instagram-View-Surge-2026---Fast-View-Boosting-Software-for-Windows">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 40px 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        h1 {
+            color: #1a1a2e;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        h1 emoji {
+            font-size: 1.2em;
+        }
+        .tagline {
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        .section h2 {
+            color: #1a1a2e;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+        .section ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border-left: 4px solid #764ba2;
+        }
+        .feature-item emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        .steps li {
+            counter-increment: step;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px 15px 15px 50px;
+            margin-bottom: 15px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #764ba2;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .download-badge {
+            text-align: center;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            .section {
+                padding: 20px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Instagram-View-Surge-2026 - Your Fastest Path to Video Views</h1>
+            <p class="tagline">Boost your Instagram views instantly in 2026</p>
+            <div class="download-badge">
+                <a href="https://github.com/Globalclimatechangemonitor5146/Instagram-View-Surge-2026---Fast-View-Boosting-Software-for-Windows" class="btn-primary">⬇️ Download Now - Free Access</a>
+            </div>
+        </header>
 
-</div>
-</section>
-<section id="my-design" class="w-full bg-surface border-y border-ink py-section-gap relative overflow-hidden" style="background:linear-gradient(135deg,#ffd8e6 0%,#fff8f6 45%,#ffffff 100%);">
-<div class="absolute top-20 -left-10 w-64 h-64 bg-primary-container rounded-full mix-blend-multiply opacity-50 blur-[100px] pointer-events-none"></div>
-<div class="absolute bottom-20 -right-10 w-80 h-80 bg-primary-fixed rounded-full mix-blend-multiply opacity-50 blur-[110px] pointer-events-none"></div>
-<div class="max-w-[1200px] mx-auto px-margin-page relative z-10">
-<div class="flex flex-col md:flex-row justify-between items-end gap-stack-lg mb-stack-lg">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-ink max-w-2xl uppercase">
-          My Design
-</h2>
-<a class="font-label-bold text-label-bold text-ink underline decoration-2 underline-offset-4 hover:text-primary transition-colors flex items-center gap-1" href="#">
-          Lihat semua <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<div class="bg-surface border border-ink rounded-xl shadow-[6px_6px_0px_0px_#0a0a0a] flex flex-col hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#0a0a0a] transition-all duration-300 group cursor-pointer" onclick="openManualPopup()" role="button" tabindex="0" aria-label="Lihat karya Manual">
-<div class="h-48 bg-primary-container border-b border-ink rounded-t-xl relative overflow-hidden">
-<img alt="Thumbnail Desain Manual" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" src="image/tumbnail desain manual.jpeg"/>
-<div class="absolute bottom-4 left-4 bg-surface border border-ink px-3 py-1 rounded-full text-caption font-caption font-bold shadow-[2px_2px_0_#0a0a0a]">Manual</div>
-<div class="absolute top-4 right-4 bg-ink text-surface border border-ink px-3 py-1 rounded-full text-caption font-caption font-bold">5 Karya</div>
-</div>
-<div class="p-6 flex flex-col flex-grow gap-stack-md">
-<h3 class="font-headline-md text-headline-md text-ink">Manual Drawing</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Sketsa, ilustrasi, dan eksplorasi media tradisional yang dikerjakan secara langsung dengan tangan.</p>
-<ul class="flex flex-col gap-2 mt-2">
-<li class="flex items-start gap-2">
-<span class="text-primary mt-0.5">&#10003;</span>
-<span class="font-caption text-caption text-ink">Sketsa &amp; Ilustrasi</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-primary mt-0.5">&#10003;</span>
-<span class="font-caption text-caption text-ink">Lettering &amp; Tipografi</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="bg-surface border border-ink rounded-xl shadow-[6px_6px_0px_0px_#0a0a0a] flex flex-col hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#0a0a0a] transition-all duration-300 group md:translate-y-8 cursor-pointer" onclick="openDigitalPopup()" role="button" tabindex="0" aria-label="Lihat karya Digital">
-<div class="h-48 bg-secondary-fixed border-b border-ink rounded-t-xl relative overflow-hidden">
-<img alt="Thumbnail Desain Digital" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" src="image/tumbnail desain digital.jpeg"/>
-<div class="absolute bottom-4 left-4 bg-surface border border-ink px-3 py-1 rounded-full text-caption font-caption font-bold shadow-[2px_2px_0_#0a0a0a]">Digital</div>
-<div class="absolute top-4 right-4 bg-ink text-surface border border-ink px-3 py-1 rounded-full text-caption font-caption font-bold">14 Karya</div>
-</div>
-<div class="p-6 flex flex-col flex-grow gap-stack-md">
-<h3 class="font-headline-md text-headline-md text-ink">Digital Design</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Desain grafis berbasis digital: poster, branding, dan layout yang dikerjakan dengan perangkat lunak.</p>
-<ul class="flex flex-col gap-2 mt-2">
-<li class="flex items-start gap-2">
-<span class="text-secondary mt-0.5">&#10003;</span>
-<span class="font-caption text-caption text-ink">Poster &amp; Grafis</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-secondary mt-0.5">&#10003;</span>
-<span class="font-caption text-caption text-ink">Branding &amp; Layout</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="bg-surface border border-ink rounded-xl shadow-[6px_6px_0px_0px_#0a0a0a] flex flex-col hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#0a0a0a] transition-all duration-300 group cursor-pointer" onclick="openThreedPopup()" role="button" tabindex="0" aria-label="Lihat karya 3D">
-<div class="h-48 bg-tertiary-fixed border-b border-ink rounded-t-xl relative overflow-hidden"><img alt="Thumbnail 3D Artwork" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" src="image/tumbnail 3d.jpeg"/>
-<div class="absolute bottom-4 left-4 bg-surface border border-ink px-3 py-1 rounded-full text-caption font-caption font-bold shadow-[2px_2px_0_#0a0a0a]">3D</div>
-<div class="absolute top-4 right-4 bg-ink text-surface border border-ink px-3 py-1 rounded-full text-caption font-caption font-bold">2 Karya</div>
-</div>
-<div class="p-6 flex flex-col flex-grow gap-stack-md">
-<h3 class="font-headline-md text-headline-md text-ink">3D Artwork</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Eksplorasi objek tiga dimensi: pemodelan, tekstur, hingga rendering hasil akhir.</p>
-<ul class="flex flex-col gap-2 mt-2">
-<li class="flex items-start gap-2">
-<span class="text-tertiary mt-0.5">&#10003;</span>
-<span class="font-caption text-caption text-ink">3D Modeling</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-tertiary mt-0.5">&#10003;</span>
-<span class="font-caption text-caption text-ink">3D Rendering</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<svg class="absolute bottom-0 right-0 w-[600px] h-auto text-sage-muted opacity-30 pointer-events-none transform translate-x-1/4 translate-y-1/4 z-0" fill="currentColor" viewbox="0 0 200 200">
-<path d="M45.7,-76.3C58.9,-69.3,69.1,-55.3,77.7,-40.8C86.3,-26.3,93.4,-11.3,92.5,3.3C91.6,17.9,82.8,32.1,72.3,44.1C61.8,56.1,49.7,65.9,35.9,72.8C22.1,79.7,6.6,83.7,-8.4,81.4C-23.4,79.1,-37.9,70.5,-50.2,60.1C-62.5,49.7,-72.6,37.5,-79.6,23.1C-86.6,8.7,-90.5,-7.9,-86,-22.3C-81.5,-36.7,-68.6,-48.9,-54.6,-56.3C-40.6,-63.7,-25.5,-66.3,-10.1,-69.1C5.3,-71.9,20.6,-74.9,32.5,-83.3L45.7,-76.3Z" transform="translate(100 100)"></path>
-</svg>
-</section>
-</div></main><footer class="w-full bg-surface-container-highest border-t border-ink py-section-gap mt-section-gap"><div class="max-w-[1200px] mx-auto px-margin-page flex flex-col md:flex-row justify-between items-center gap-stack-lg"><div class="flex flex-col gap-stack-sm text-center md:text-left"><span class="font-display text-headline-md text-ink">ANATOMY OF IDEA</span><p class="font-caption text-caption text-on-surface-variant">Ã‚Â© 2024 Anatomy of Idea Creative Lab. All rights reserved.</p></div><div class="flex gap-stack-md items-center"><a class="p-2 border border-ink bg-secondary-container rounded-lg shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" href="#"><span class="material-symbols-outlined text-ink">share</span></a><a class="p-2 border border-ink bg-tertiary-fixed rounded-lg shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" href="#"><span class="material-symbols-outlined text-ink">alternate_email</span></a><a class="p-2 border border-ink bg-primary-fixed rounded-lg shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" href="#"><span class="material-symbols-outlined text-ink">public</span></a></div></div></footer><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="digital-popup" onclick="closeDigitalPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><h3 class="font-headline-md text-headline-md text-ink">Digital Design &middot; 7 Kategori</h3><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeDigitalPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="digital-hub"><button class="bg-surface border border-ink rounded-xl p-4 flex items-center gap-3 text-left shadow-[4px_4px_0px_0px_#0a0a0a] hover:-translate-y-1 transition-transform" onclick="closeDigitalPopup();openLogoPopup()"><span class="material-symbols-outlined text-ink text-[28px]">verified</span><span class="flex flex-col"><span class="font-label-bold text-label-bold text-ink">Logo</span><span class="font-caption text-caption text-on-surface-variant">4 Karya</span></span></button><button class="bg-surface border border-ink rounded-xl p-4 flex items-center gap-3 text-left shadow-[4px_4px_0px_0px_#0a0a0a] hover:-translate-y-1 transition-transform" onclick="closeDigitalPopup();openBajuPopup()"><span class="material-symbols-outlined text-ink text-[28px]">checkroom</span><span class="flex flex-col"><span class="font-label-bold text-label-bold text-ink">Desain Baju</span><span class="font-caption text-caption text-on-surface-variant">2 Karya</span></span></button><button class="bg-surface border border-ink rounded-xl p-4 flex items-center gap-3 text-left shadow-[4px_4px_0px_0px_#0a0a0a] hover:-translate-y-1 transition-transform" onclick="closeDigitalPopup();openPosterPopup()"><span class="material-symbols-outlined text-ink text-[28px]">image</span><span class="flex flex-col"><span class="font-label-bold text-label-bold text-ink">Poster</span><span class="font-caption text-caption text-on-surface-variant">5 Karya</span></span></button><button class="bg-surface border border-ink rounded-xl p-4 flex items-center gap-3 text-left shadow-[4px_4px_0px_0px_#0a0a0a] hover:-translate-y-1 transition-transform" onclick="closeDigitalPopup();openKarakterPopup()"><span class="material-symbols-outlined text-ink text-[28px]">face</span><span class="flex flex-col"><span class="font-label-bold text-label-bold text-ink">Karakter Ilustrasi</span><span class="font-caption text-caption text-on-surface-variant">2 Karya</span></span></button><button class="bg-surface border border-ink rounded-xl p-4 flex items-center gap-3 text-left shadow-[4px_4px_0px_0px_#0a0a0a] hover:-translate-y-1 transition-transform" onclick="closeDigitalPopup();openModulPopup()"><span class="material-symbols-outlined text-ink text-[28px]">inventory_2</span><span class="flex flex-col"><span class="font-label-bold text-label-bold text-ink">Modul</span><span class="font-caption text-caption text-on-surface-variant">1 Karya</span></span></button><button class="bg-surface border border-ink rounded-xl p-4 flex items-center gap-3 text-left shadow-[4px_4px_0px_0px_#0a0a0a] hover:-translate-y-1 transition-transform" onclick="closeDigitalPopup();openPhotoPopup()"><span class="material-symbols-outlined text-ink text-[28px]">photo_camera</span><span class="flex flex-col"><span class="font-label-bold text-label-bold text-ink">Photography</span><span class="font-caption text-caption text-on-surface-variant">3 Karya</span></span></button><button class="bg-surface border border-ink rounded-xl p-4 flex items-center gap-3 text-left shadow-[4px_4px_0px_0px_#0a0a0a] hover:-translate-y-1 transition-transform" onclick="closeDigitalPopup();openYoutubePopup()"><span class="material-symbols-outlined text-ink text-[28px]">smart_display</span><span class="flex flex-col"><span class="font-label-bold text-label-bold text-ink">Thumbnail Youtube</span><span class="font-caption text-caption text-on-surface-variant">5 Karya</span></span></button></div><p class="mt-3 text-center font-caption text-caption text-on-surface-variant">Pilih kategori untuk melihat karya.</p></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="logo-popup" onclick="closeLogoPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><div class="flex items-center gap-2"><button aria-label="Kembali" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeLogoPopup();openDigitalPopup()"><span class="material-symbols-outlined text-ink">arrow_back</span></button><h3 class="font-headline-md text-headline-md text-ink">Logo &middot; 4 Karya</h3></div><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeLogoPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="logo-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="logo-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Logo Healty" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/logo healty.png" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Logo Healty &middot; 1 / 4</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Logo Velisse" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/LOGO VELISSE.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Logo Velisse &middot; 2 / 4</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Logo Sakurae" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/LOGO SAKURAE.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Logo Sakurae &middot; 3 / 4</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Logo Little" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/logo little.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Logo Little &middot; 4 / 4</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="logoPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="logoPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="logo-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="logoPopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="logoPopupShow(1)"></button><button aria-label="Gambar 3" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="logoPopupShow(2)"></button><button aria-label="Gambar 4" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="logoPopupShow(3)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="baju-popup" onclick="closeBajuPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><div class="flex items-center gap-2"><button aria-label="Kembali" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeBajuPopup();openDigitalPopup()"><span class="material-symbols-outlined text-ink">arrow_back</span></button><h3 class="font-headline-md text-headline-md text-ink">Desain Baju &middot; 2 Karya</h3></div><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeBajuPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="baju-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="baju-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Baju Kemerdekaan" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/baju kemerdekaan.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Baju Kemerdekaan &middot; 1 / 2</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Mockup Baju Logo Rendezvous" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Mockup baju logo rendezvous.jpg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Mockup Baju Logo Rendezvous &middot; 2 / 2</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="bajuPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="bajuPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="baju-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="bajuPopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="bajuPopupShow(1)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="poster-popup" onclick="closePosterPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><div class="flex items-center gap-2"><button aria-label="Kembali" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closePosterPopup();openDigitalPopup()"><span class="material-symbols-outlined text-ink">arrow_back</span></button><h3 class="font-headline-md text-headline-md text-ink">Poster &middot; 5 Karya</h3></div><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closePosterPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="poster-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="poster-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Poster Amuse" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/poster amuse.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Poster Amuse &middot; 1 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Poster" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/poster.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Poster &middot; 2 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Poster Aespa" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/poster aespa.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Poster Aespa &middot; 3 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Poster Penerimaan Mahasiswa Baru" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Poster Penerimaan Mahasiswa Baru.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Poster Penerimaan Mahasiswa Baru &middot; 4 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Poster Seminar" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Poster Seminar.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Poster Seminar &middot; 5 / 5</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="posterPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="posterPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="poster-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="posterPopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="posterPopupShow(1)"></button><button aria-label="Gambar 3" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="posterPopupShow(2)"></button><button aria-label="Gambar 4" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="posterPopupShow(3)"></button><button aria-label="Gambar 5" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="posterPopupShow(4)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="karakter-popup" onclick="closeKarakterPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><div class="flex items-center gap-2"><button aria-label="Kembali" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeKarakterPopup();openDigitalPopup()"><span class="material-symbols-outlined text-ink">arrow_back</span></button><h3 class="font-headline-md text-headline-md text-ink">Karakter Ilustrasi &middot; 2 Karya</h3></div><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeKarakterPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="karakter-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="karakter-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Ilustrasi Karakter" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/ilustrasi karakter.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Ilustrasi Karakter &middot; 1 / 2</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Maskot Harimau" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/maskot harimau.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Maskot Harimau &middot; 2 / 2</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="karakterPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="karakterPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="karakter-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="karakterPopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="karakterPopupShow(1)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="modul-popup" onclick="closeModulPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><div class="flex items-center gap-2"><button aria-label="Kembali" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeModulPopup();openDigitalPopup()"><span class="material-symbols-outlined text-ink">arrow_back</span></button><h3 class="font-headline-md text-headline-md text-ink">Modul &middot; 1 Karya</h3></div><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeModulPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="modul-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="modul-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><embed class="relative w-full h-[60vh] bg-white rounded-2xl border border-ink block m-0 p-0 mx-auto" src="image/modul logo velisse.pdf" type="application/pdf" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Modul Logo Velisse &middot; 1 / 1</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="modulPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="modulPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="modul-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="modulPopupShow(0)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="photo-popup" onclick="closePhotoPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><div class="flex items-center gap-2"><button aria-label="Kembali" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closePhotoPopup();openDigitalPopup()"><span class="material-symbols-outlined text-ink">arrow_back</span></button><h3 class="font-headline-md text-headline-md text-ink">Photography &middot; 3 Karya</h3></div><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closePhotoPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="photo-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="photo-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Fotografi Pohon" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/fotografi pohon.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Fotografi Pohon &middot; 1 / 3</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Fotografi Jalan" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/fotografi jalan.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Fotografi Jalan &middot; 2 / 3</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Fotografi Piala" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/fotografi piala.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Fotografi Piala &middot; 3 / 3</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="photoPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="photoPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="photo-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="photoPopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="photoPopupShow(1)"></button><button aria-label="Gambar 3" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="photoPopupShow(2)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="youtube-popup" onclick="closeYoutubePopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><div class="flex items-center gap-2"><button aria-label="Kembali" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeYoutubePopup();openDigitalPopup()"><span class="material-symbols-outlined text-ink">arrow_back</span></button><h3 class="font-headline-md text-headline-md text-ink">Thumbnail Youtube &middot; 5 Karya</h3></div><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeYoutubePopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="youtube-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="youtube-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Tumbnail Mengenal Pengalaman Alumni DTMM" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Tumbnail Mengenal Pengalaman Alumni DTMM.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Tumbnail Mengenal Pengalaman Alumni DTMM &middot; 1 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Tumbnail Fast Track dan Fresh Graduate" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Tumbnail Fast Track dan Fresh Graduate.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Tumbnail Fast Track dan Fresh Graduate &middot; 2 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Tumbnail Menggali Potensi DTMM" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Tumbnail Menggali Potensi DTMM.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Tumbnail Menggali Potensi DTMM &middot; 3 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Tumbnail Bensin Sawit DTMM" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Tumbnail Bensin Sawit DTMM.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Tumbnail Bensin Sawit DTMM &middot; 4 / 5</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Tumbnail Mengenal Perjalanan Antasena" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Tumbnail Mengenal Perjalanan Antasena.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Tumbnail Mengenal Perjalanan Antasena &middot; 5 / 5</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="youtubePopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="youtubePopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="youtube-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="youtubePopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="youtubePopupShow(1)"></button><button aria-label="Gambar 3" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="youtubePopupShow(2)"></button><button aria-label="Gambar 4" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="youtubePopupShow(3)"></button><button aria-label="Gambar 5" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="youtubePopupShow(4)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="manual-popup" onclick="closeManualPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><h3 class="font-headline-md text-headline-md text-ink">Manual Drawing &middot; 8 Karya</h3><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeManualPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="manual-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="manual-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Nirmana Titik" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/nirmana titik.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Nirmana Titik &middot; 1 / 8</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Nirmana Dwimatra" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/Nirmana Dwimatra.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Nirmana Dwimatra &middot; 2 / 8</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Gambar Lettering" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/gambar lettering.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Gambar Lettering &middot; 3 / 8</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Gambar Tupai" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/gambar tupai.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Gambar Tupai &middot; 4 / 8</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Gambar Monster" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/gambar monster.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Gambar Monster &middot; 5 / 8</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-tertiary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Sketsa Karakter" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/sketsa karakter.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Sketsa Karakter &middot; 6 / 8</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Nirmana Garis" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/nirmana garis.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Nirmana Garis &middot; 7 / 8</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="Nirmana Garis Lengkung" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/nirmana garis lengkung.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">Nirmana Garis Lengkung &middot; 8 / 8</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="manualPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="manualPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="manual-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="manualPopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="manualPopupShow(1)"></button><button aria-label="Gambar 3" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="manualPopupShow(2)"></button><button aria-label="Gambar 4" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="manualPopupShow(3)"></button><button aria-label="Gambar 5" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="manualPopupShow(4)"></button><button aria-label="Gambar 6" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="manualPopupShow(5)"></button><button aria-label="Gambar 7" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="manualPopupShow(6)"></button><button aria-label="Gambar 8" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="manualPopupShow(7)"></button></div></div></div><div aria-hidden="true" class="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm p-4 md:p-8 items-center justify-center hidden" id="threed-popup" onclick="closeThreedPopup()" role="dialog"><div class="relative bg-paper border border-ink rounded-2xl p-stack-lg w-[92vw] sm:w-auto sm:min-w-[320px] sm:max-w-[540px] h-fit max-h-[92vh] my-auto mx-auto overflow-y-auto flex flex-col" onclick="event.stopPropagation()" style="box-shadow:8px 8px 0px 0px #0a0a0a;"><div class="flex items-center justify-between mb-stack-md shrink-0"><h3 class="font-headline-md text-headline-md text-ink">3D Artwork &middot; 2 Karya</h3><button aria-label="Tutup" class="w-10 h-10 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all" onclick="closeThreedPopup()"><span class="material-symbols-outlined text-ink">close</span></button></div><div class="relative shrink-0" id="threed-popup-carousel"><div class="overflow-hidden rounded-2xl leading-none m-0 p-0"><div class="flex items-center transition-transform duration-500 ease-out leading-none" id="threed-popup-track" style="transform:translateX(0%);"><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="3D Karakter Udang" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/3d karakter udang.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">3D Karakter Udang &middot; 1 / 2</figcaption></figure><figure class="w-full shrink-0 p-0 relative flex flex-col justify-center m-0 gap-0 leading-none"><div class="absolute inset-0 bg-secondary translate-x-3 translate-y-3 rounded-2xl border border-ink"></div><img alt="3D Plankton" class="relative w-full h-auto max-h-[68vh] object-contain bg-white rounded-2xl border border-ink block m-0 p-0 align-bottom mx-auto" src="image/3d plankton.jpeg" style="box-shadow:6px 6px 0px 0px #0a0a0a;"/><figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 m-0 text-center font-label-bold text-label-bold text-ink bg-paper/95 border border-ink px-3 py-1 rounded-full whitespace-nowrap shadow-[2px_2px_0_#0a0a0a]">3D Plankton &middot; 2 / 2</figcaption></figure></div></div><button aria-label="Sebelumnya" class="absolute top-1/2 -translate-y-1/2 left-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="threedPopupPrev()"><span class="material-symbols-outlined text-ink">chevron_left</span></button><button aria-label="Berikutnya" class="absolute top-1/2 -translate-y-1/2 right-2 w-11 h-11 bg-surface border border-ink rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_#0a0a0a] hover:shadow-none hover:translate-x-[1px] transition-all z-10" onclick="threedPopupNext()"><span class="material-symbols-outlined text-ink">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-2 mb-0 pb-0 pt-0 shrink-0" id="threed-popup-dots"><button aria-label="Gambar 1" class="w-8 h-3 bg-ink border border-ink rounded-full transition-all" onclick="threedPopupShow(0)"></button><button aria-label="Gambar 2" class="w-3 h-3 bg-surface-container border border-ink rounded-full transition-all" onclick="threedPopupShow(1)"></button></div></div></div><script>
-var deck=document.getElementById('deck');
-function deckGo(id){var el=document.getElementById(id);if(el){el.scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});}}
-var digitalPopupIndex=0;var digitalPopupTotal=7;
-function digitalPopupShow(i){digitalPopupIndex=(i+digitalPopupTotal)%digitalPopupTotal;var track=document.getElementById('digital-popup-track');if(track){track.style.transform='translateX(-'+(digitalPopupIndex*100)+'%)';}var dotsEl=document.getElementById('digital-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===digitalPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function digitalPopupNext(){digitalPopupShow(digitalPopupIndex+1);}
-function digitalPopupPrev(){digitalPopupShow(digitalPopupIndex-1);}
-function openDigitalPopup(){var p=document.getElementById('digital-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');digitalPopupShow(0);}
-function closeDigitalPopup(){var p=document.getElementById('digital-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var logoPopupIndex=0;var logoPopupTotal=4;
-function logoPopupShow(i){logoPopupIndex=(i+logoPopupTotal)%logoPopupTotal;var track=document.getElementById('logo-popup-track');if(track){track.style.transform='translateX(-'+(logoPopupIndex*100)+'%)';}var dotsEl=document.getElementById('logo-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===logoPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function logoPopupNext(){logoPopupShow(logoPopupIndex+1);}
-function logoPopupPrev(){logoPopupShow(logoPopupIndex-1);}
-function openLogoPopup(){var p=document.getElementById('logo-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');logoPopupShow(0);}
-function closeLogoPopup(){var p=document.getElementById('logo-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var bajuPopupIndex=0;var bajuPopupTotal=2;
-function bajuPopupShow(i){bajuPopupIndex=(i+bajuPopupTotal)%bajuPopupTotal;var track=document.getElementById('baju-popup-track');if(track){track.style.transform='translateX(-'+(bajuPopupIndex*100)+'%)';}var dotsEl=document.getElementById('baju-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===bajuPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function bajuPopupNext(){bajuPopupShow(bajuPopupIndex+1);}
-function bajuPopupPrev(){bajuPopupShow(bajuPopupIndex-1);}
-function openBajuPopup(){var p=document.getElementById('baju-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');bajuPopupShow(0);}
-function closeBajuPopup(){var p=document.getElementById('baju-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var posterPopupIndex=0;var posterPopupTotal=5;
-function posterPopupShow(i){posterPopupIndex=(i+posterPopupTotal)%posterPopupTotal;var track=document.getElementById('poster-popup-track');if(track){track.style.transform='translateX(-'+(posterPopupIndex*100)+'%)';}var dotsEl=document.getElementById('poster-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===posterPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function posterPopupNext(){posterPopupShow(posterPopupIndex+1);}
-function posterPopupPrev(){posterPopupShow(posterPopupIndex-1);}
-function openPosterPopup(){var p=document.getElementById('poster-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');posterPopupShow(0);}
-function closePosterPopup(){var p=document.getElementById('poster-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var karakterPopupIndex=0;var karakterPopupTotal=2;
-function karakterPopupShow(i){karakterPopupIndex=(i+karakterPopupTotal)%karakterPopupTotal;var track=document.getElementById('karakter-popup-track');if(track){track.style.transform='translateX(-'+(karakterPopupIndex*100)+'%)';}var dotsEl=document.getElementById('karakter-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===karakterPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function karakterPopupNext(){karakterPopupShow(karakterPopupIndex+1);}
-function karakterPopupPrev(){karakterPopupShow(karakterPopupIndex-1);}
-function openKarakterPopup(){var p=document.getElementById('karakter-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');karakterPopupShow(0);}
-function closeKarakterPopup(){var p=document.getElementById('karakter-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var modulPopupIndex=0;var modulPopupTotal=1;
-function modulPopupShow(i){modulPopupIndex=(i+modulPopupTotal)%modulPopupTotal;var track=document.getElementById('modul-popup-track');if(track){track.style.transform='translateX(-'+(modulPopupIndex*100)+'%)';}var dotsEl=document.getElementById('modul-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===modulPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function modulPopupNext(){modulPopupShow(modulPopupIndex+1);}
-function modulPopupPrev(){modulPopupShow(modulPopupIndex-1);}
-function openModulPopup(){var p=document.getElementById('modul-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');modulPopupShow(0);}
-function closeModulPopup(){var p=document.getElementById('modul-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var photoPopupIndex=0;var photoPopupTotal=3;
-function photoPopupShow(i){photoPopupIndex=(i+photoPopupTotal)%photoPopupTotal;var track=document.getElementById('photo-popup-track');if(track){track.style.transform='translateX(-'+(photoPopupIndex*100)+'%)';}var dotsEl=document.getElementById('photo-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===photoPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function photoPopupNext(){photoPopupShow(photoPopupIndex+1);}
-function photoPopupPrev(){photoPopupShow(photoPopupIndex-1);}
-function openPhotoPopup(){var p=document.getElementById('photo-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');photoPopupShow(0);}
-function closePhotoPopup(){var p=document.getElementById('photo-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}var youtubePopupIndex=0;var youtubePopupTotal=5;function youtubePopupShow(i){youtubePopupIndex=(i+youtubePopupTotal)%youtubePopupTotal;var track=document.getElementById('youtube-popup-track');if(track){track.style.transform='translateX(-'+(youtubePopupIndex*100)+'%)';}var dotsEl=document.getElementById('youtube-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===youtubePopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}function youtubePopupNext(){youtubePopupShow(youtubePopupIndex+1);}function youtubePopupPrev(){youtubePopupShow(youtubePopupIndex-1);}function openYoutubePopup(){var p=document.getElementById('youtube-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');youtubePopupShow(0);}function closeYoutubePopup(){var p=document.getElementById('youtube-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var manualPopupIndex=0;var manualPopupTotal=8;
-function manualPopupShow(i){manualPopupIndex=(i+manualPopupTotal)%manualPopupTotal;var track=document.getElementById('manual-popup-track');if(track){track.style.transform='translateX(-'+(manualPopupIndex*100)+'%)';}var dotsEl=document.getElementById('manual-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===manualPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function manualPopupNext(){manualPopupShow(manualPopupIndex+1);}
-function manualPopupPrev(){manualPopupShow(manualPopupIndex-1);}
-function openManualPopup(){var p=document.getElementById('manual-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');manualPopupShow(0);}
-function closeManualPopup(){var p=document.getElementById('manual-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-var threedPopupIndex=0;var threedPopupTotal=2;
-function threedPopupShow(i){threedPopupIndex=(i+threedPopupTotal)%threedPopupTotal;var track=document.getElementById('threed-popup-track');if(track){track.style.transform='translateX(-'+(threedPopupIndex*100)+'%)';}var dotsEl=document.getElementById('threed-popup-dots');if(dotsEl){var dots=dotsEl.children;for(var k=0;k<dots.length;k++){dots[k].className=(k===threedPopupIndex)?'w-8 h-3 bg-ink border border-ink rounded-full transition-all':'w-3 h-3 bg-surface-container border border-ink rounded-full transition-all';}}}
-function threedPopupNext(){threedPopupShow(threedPopupIndex+1);}
-function threedPopupPrev(){threedPopupShow(threedPopupIndex-1);}
-function openThreedPopup(){var p=document.getElementById('threed-popup');if(!p)return;p.classList.remove('hidden');p.classList.add('flex');threedPopupShow(0);}
-function closeThreedPopup(){var p=document.getElementById('threed-popup');if(p){p.classList.add('hidden');p.classList.remove('flex');}}
-(function(){var el=document.getElementById('digital-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)digitalPopupNext();else if(dx>40)digitalPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('manual-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)manualPopupNext();else if(dx>40)manualPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('threed-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)threedPopupNext();else if(dx>40)threedPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('logo-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)logoPopupNext();else if(dx>40)logoPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('baju-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)bajuPopupNext();else if(dx>40)bajuPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('poster-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)posterPopupNext();else if(dx>40)posterPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('karakter-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)karakterPopupNext();else if(dx>40)karakterPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('modul-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)modulPopupNext();else if(dx>40)modulPopupPrev();x0=null;},{passive:true});})();
-(function(){var el=document.getElementById('photo-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)photoPopupNext();else if(dx>40)photoPopupPrev();x0=null;},{passive:true});})();(function(){var el=document.getElementById('youtube-popup-carousel');if(!el)return;var x0=null;el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});el.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(dx<-40)youtubePopupNext();else if(dx>40)youtubePopupPrev();x0=null;},{passive:true});})();
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeDigitalPopup();closeManualPopup();closeThreedPopup();closeLogoPopup();closeBajuPopup();closePosterPopup();closeKarakterPopup();closeModulPopup();closePhotoPopup();closeYoutubePopup();}else if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();deck.scrollBy({left:window.innerWidth,behavior:'smooth'});}else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();deck.scrollBy({left:-window.innerWidth,behavior:'smooth'});}});
-</script>
-</body></html>
+        <section class="section">
+            <h2>💥 What Is Instagram-View-Surge-2026?</h2>
+            <p>Instagram-View-Surge-2026 is a powerful Windows-based software designed specifically for content creators, marketers, and social media enthusiasts who need to increase their Instagram video views quickly and effectively. In today's competitive digital landscape, visibility is everything — and this tool gives you the edge you need to stand out.</p>
+            <p>Unlike other solutions that require complex setups or login credentials, Instagram-View-Surge-2026 is refreshingly simple. No login required. No complicated configurations. Just install, launch, and watch your content gain the traction it deserves.</p>
+        </section>
+
+        <section class="section">
+            <h2>💡 Key Features & Benefits</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <emoji>⚡</emoji>
+                    <strong>Ultra-Fast Performance</strong>
+                    <p>Engineered for speed with optimized algorithms for rapid view boosting</p>
+                </div>
+                <div class="feature-item">
+                    <emoji>🔒</emoji>
+                    <strong>No Login Required</strong>
+                    <p>Your privacy matters. No account, no password, no personal data needed</p>
+                </div>
+                <div class="feature-item">
+                    <emoji>🔄</emoji>
+                    <strong>Regular Updates</strong>
+                    <p>Our team continuously updates the software to maintain maximum effectiveness</p>
+                </div>
+                <div class="feature-item">
+                    <emoji>🪟</emoji>
+                    <strong>Windows Optimized</strong>
+                    <p>Built specifically for Windows systems for reliable, stable operation</p>
+                </div>
+            </div>
+            <ul style="list-style-type: none; padding-left: 0; margin-top: 20px;">
+                <li>✅ <strong>Intuitive Interface</strong> - User-friendly design that even beginners can navigate effortlessly</li>
+                <li>✅ <strong>Stable & Reliable</strong> - Tested on multiple Windows versions for consistent performance</li>
+                <li>✅ <strong>Lightweight</strong> - Minimal system resource usage, doesn't slow down your computer</li>
+                <li>✅ <strong>Versatile Compatibility</strong> - Works with various Instagram video formats and content types</li>
+                <li>✅ <strong>No Technical Skills Needed</strong> - Perfect for beginners and advanced users alike</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>📥 How to Download & Install</h2>
+            <p>Getting started with Instagram-View-Surge-2026 is as easy as 1-2-3. Follow these simple steps:</p>
+            <ol class="steps">
+                <li><strong>Visit the official download page:</strong> <a href="https://github.com/Globalclimatechangemonitor5146/Instagram-View-Surge-2026---Fast-View-Boosting-Software-for-Windows">Click here to access the official Instagram-View-Surge-2026 download page</a>. This is the only official source, so bookmarked it for future reference.</li>
+                <li><strong>Download the application:</strong> Look for the most recent release or "Download" button on the page. Your browser will begin downloading the file automatically. The download typically takes just a few seconds depending on your internet speed.</li>
+                <li><strong>Visit this link to download the application.</strong> Make sure you're on a stable internet connection to avoid any interruptions during the download process.</li>
+            </ol>
+            <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 4px solid #4caf50; margin-top: 20px;">
+                <strong>💡 Pro Tip:</strong> Save the downloaded file somewhere easily accessible, like your Desktop or Downloads folder, so you can find it quickly.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🚀 How to Use Instagram-View-Surge-2026</h2>
+            <p>Once you've successfully downloaded the software, here's how to get started:</p>
+            <ol class="steps">
+                <li><strong>Locate the downloaded file:</strong> Go to your Downloads folder (or wherever your browser saves files) and find the Instagram-View-Surge-2026 file you just downloaded.</li>
+                <li><strong>Run the application:</strong> Double-click the file to launch Instagram-View-Surge-2026. No installation wizard needed — it runs directly!</li>
+                <li><strong>Add your Instagram video:</strong> Click the "Add Video" button or drag-and-drop your video file into the application window. Instagram-View-Surge-2026 supports all standard video formats.</li>
+                <li><strong>Configure your preferences:</strong> Customize your viewing parameters. You can adjust the number of views you want, the viewing speed, and other advanced settings (though defaults work perfectly for most users).</li>
+                <li><strong>Boost your views:</strong> Hit the "Boost" or "Start" button, and watch Instagram-View-Surge-2026 work its magic. The software efficiently increases your video's view count while keeping everything stable and safe.</li>
+                <li><strong>Monitor your progress:</strong> The dashboard shows real-time statistics, so you can track your growth as it happens.</li>
+            </ol>
+            <div style="background: #fff3e0; padding: 15px; border-radius: 8px; border-left: 4px solid #ff9800; margin-top: 20px;">
+                <strong>💡 Note:</strong> For best results, leave the application running until you reach your desired view count. The process is designed to be smooth and interference-free.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🛡️ Safety & Reliability</h2>
+            <p>Your peace of mind is important to us. Instagram-View-Surge-2026 is built with safety as a core principle:</p>
+            <ul>
+                <li><strong>No Account Access:</strong> We never ask for your Instagram login details. Your account stays 100% protected.</li>
+                <li><strong>Clean Software:</strong> No adware, spyware, or adware bundled in. What you download is what you get.</li>
+                <li><strong>Constant Optimization:</strong> Our team regularly updates the software to ensure it works smoothly with Instagram's current algorithms.</li>
+                <li><strong>No Lockouts:</strong> The tool is designed to mimic natural viewing behavior, reducing any risk to your account.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>💬 Frequently Asked Questions</h2>
+            <h3>Q1: Is this software free?</h3>
+            <p>Yes! The current version of Instagram-View-Surge-2026 is available free of charge from the official download page.</p>
+            <h3>Q2: Do I need technical skills to use this?</h3>
+            <p>Not at all. The interface is designed for absolute beginners. If you can click a button and drag a file, you can use this software.</p>
+            <h3>Q3: Will this work on my computer?</h3>
+            <p>Instagram-View-Surge-2026 is built for Windows and requires a standard Windows 10/11 setup. It's lightweight, so even older computers should run it smoothly.</p>
+            <h3>Q4: Can I use this for my business accounts?</h3>
+            <p>Absolutely. Many marketers, influencers, and business owners use Instagram-View-Surge-2026 to enhance their content's reach and engagement.</p>
+            <h3>Q5: Is my Instagram account safe?</h3>
+            <p>Yes, because we don't require your login credentials, your account remains completely under your control. The tool only works on the videos you select.</p>
+        </section>
+
+        <section class="section">
+            <h2>🌐 Community</h2>
+            <p>Join thousands of satisfied users who've already experienced the boost in their Instagram presence. Share your success stories, ask questions, and connect with other creators in our growing community. Your feedback helps us improve and evolve.</p>
+            <p>Follow us for updates on new features, version releases, and tips to maximize your results.</p>
+        </section>
+
+        <section class="section" style="text-align: center;">
+            <h2>🎯 Ready to Boost Your Instagram Views?</h2>
+            <p>Don't let your content sink in the sea of competition. With Instagram-View-Surge-2026, you have the power to get the visibility you deserve — fast, easy, and secure.</p>
+            <p style="font-size: 1.2rem; font-weight: bold; margin: 20px 0;">Join the creators who are already surging ahead!</p>
+            <a href="https://github.com/Globalclimatechangemonitor5146/Instagram-View-Surge-2026---Fast-View-Boosting-Software-for-Windows" class="btn-primary" style="font-size: 1.2rem; padding: 18px 50px;">⬇️ Download Now - Get Started Today</a>
+        </section>
+
+        <footer>
+            <p>© 2026 Instagram-View-Surge-2026. All rights reserved. | Windows-compatible software for content creators.</p>
+        </footer>
+    </div>
+</body>
+</html>
